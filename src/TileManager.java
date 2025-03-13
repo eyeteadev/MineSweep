@@ -10,6 +10,7 @@ public class TileManager {
 	static int amountOfBombs;
 	int rows = 22;
 	int cols = 36;
+	boolean firstClick;
 
 	
 	TileManager(MouseHandler mh, GamePanel gp, ImagesHandler ih){

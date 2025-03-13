@@ -14,7 +14,7 @@ public class MouseHandler implements MouseListener{
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
 		click = true;
-		//if(canClick) {
+		if(canClick) {
 			if(e.getSource() instanceof Tile && click == true) {
 				Tile tile = (Tile) e.getSource();
 				
@@ -46,7 +46,7 @@ public class MouseHandler implements MouseListener{
 				
 			}
 		}
-//	}
+	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {}

@@ -142,47 +142,55 @@ public class Tile extends JComponent{
 	//main clearing function.
 	// 0 to 
 	public void clear() {
+		if(tm.firstClick) {
+			tm.firstClick = false;
+			if(this.isBomb) {
+				this.isBomb = false;
+				
+			}
+		}
+		
 		if(!this.clicked) {
 			this.clicked = true;
 		
-		if(this.isBomb) {
-			//System.exit(0);
-			thisImage(10);
-			mh.canClick = false;
-		}else {
-			//System.out.println(this.number);
-			if(number  == 0) {
-				thisImage(12);
-				clearNeighbours();
+			if(this.isBomb) {
+				//System.exit(0);
+				thisImage(10);
+				mh.canClick = false;
 			}else {
-				switch(number) {
-				case 1:
-					thisImage(1);
-					break;
-				case 2:
-					thisImage(2);
-					break;
-				case 3:
-					thisImage(3);
-					break;
-				case 4:
-					thisImage(4);
-					break;
-				case 5:
-					thisImage(5);
-					break;
-				case 6:
-					thisImage(6);
-					break;
-				case 7:
-					thisImage(7);
-					break;
-				case 8:
-					thisImage(8);
-					break;
+				//System.out.println(this.number);
+				if(number  == 0) {
+					thisImage(12);
+					clearNeighbours();
+				}else {
+					switch(number) {
+					case 1:
+						thisImage(1);
+						break;
+					case 2:
+						thisImage(2);
+						break;
+					case 3:
+						thisImage(3);
+						break;
+					case 4:
+						thisImage(4);
+						break;
+					case 5:
+						thisImage(5);
+						break;
+					case 6:
+						thisImage(6);
+						break;
+					case 7:
+						thisImage(7);
+						break;
+					case 8:
+						thisImage(8);
+						break;
+					}
+				}
 			}
-			}
-		}
 		}
 		this.cleared = true;
 	}
